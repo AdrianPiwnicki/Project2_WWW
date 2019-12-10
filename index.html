@@ -69,13 +69,13 @@
 <div class="container-fluid">
     <div class="row tresc">
         <aside class="col-md-3 text-md-center sidenav">
-            <p class="popularne text-md-center mt-3">Najpopularniejsze koty:</p>
+            <p class="popularne text-center mt-3">Najpopularniejsze koty:</p>
             <form class="form-inline">
                 <button class="btn btn-primary btn-block kot1" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Kot1" id="mruczek.html">Mruczek
+                        data-placement="right" title="Mruczek - mały czarny kotek" id="mruczek.html">Mruczek
                 </button>
                 <button class="btn btn-primary btn-block text" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Kot2" name="#">Kot2
+                        data-placement="right" title="Kitka - cętkowa wesoła kotka" name="#">Kitka
                 </button>
                 <button class="btn btn-primary btn-block text" type="button" data-toggle="tooltip"
                         data-placement="right" title="Kot3" name="#">Kot3
@@ -86,20 +86,25 @@
             </form>
 
         </aside>
-        <div class="col-md-9 text-sm-center bg-secondary tlo">
+        <div class="col-md-9 text-center bg-secondary tlo">
             <h1>Oto moja strona o Kotach</h1>
-            <main class="col-md-12 text-sm-center" id="glowna">
-
+            <main class="col-md-12 text-center" id="glowna">
+                <h2 id="swieta_t">Święta się zbliżają, więc: </h2>
+                <img id="swieta_p" src="images/tytulowe.jpg" class="img-fluid" alt="zdjecie_tytulowe">
             </main>
         </div>
     </div>
-    <footer class="container-fluid text-sm-center">
+    <footer class="container-fluid text-center">
         <p class="autor">Autor: Adrian Piwnicki</p>
     </footer>
 </div>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
+    $('#swieta_t').hide();
+    $('#swieta_p').hide();
+    $('#swieta_t').show(1500);
+    $('#swieta_p').show(1500);
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
