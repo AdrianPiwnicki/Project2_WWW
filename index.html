@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         .row.tresc {
-            height: 1250px;
+            height: 800px;
         }
 
         .sidenav {
@@ -34,7 +34,7 @@
 <body>
 <header>
     <nav class="navbar bg-primary navbar-dark navbar-expand-md">
-        <a class="logo navbar-brand active" href="#">Strona główna</a>
+        <a class="logo navbar-brand active" id="index2.html">Strona główna</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#g_menu"
                 aria-controls="g_menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -74,8 +74,8 @@
                 <button class="btn btn-primary btn-block kot1" type="button" data-toggle="tooltip"
                         data-placement="right" title="Mruczek - mały czarny kotek" id="mruczek.html">Mruczek
                 </button>
-                <button class="btn btn-primary btn-block text" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Kitka - cętkowa wesoła kotka" name="#">Kitka
+                <button class="btn btn-primary btn-block kot2" type="button" data-toggle="tooltip"
+                        data-placement="right" title="Kitka - cętkowa wesoła kotka" id="kitka.html">Kitka
                 </button>
                 <button class="btn btn-primary btn-block text" type="button" data-toggle="tooltip"
                         data-placement="right" title="Kot3" name="#">Kot3
@@ -90,7 +90,7 @@
             <h1>Oto moja strona o Kotach</h1>
             <main class="col-md-12 text-center" id="glowna">
                 <h2 id="swieta_t">Święta się zbliżają, więc: </h2>
-                <img id="swieta_p" src="images/tytulowe.jpg" class="img-fluid" alt="zdjecie_tytulowe">
+                <img id="swieta_p" src="images/tytulowe.jpg" class="img-fluid mb-4" alt="zdjecie_tytulowe">
             </main>
         </div>
     </div>
@@ -103,16 +103,24 @@
 <script>
     $('#swieta_t').hide();
     $('#swieta_p').hide();
-    $('#swieta_t').show(1500);
-    $('#swieta_p').show(1500);
+    $('#swieta_t').show(2000);
+    $('#swieta_p').show(2000);
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
+    });
+    $(".logo").click(function () {
+        var ten = $(this);
+        $("#glowna").load(ten.attr("id"));
     });
     $(".tabela").click(function () {
         var ten = $(this);
         $("#glowna").load(ten.attr("id"));
     });
     $(".kot1").click(function () {
+        var ten = $(this);
+        $("#glowna").load(ten.attr("id"));
+    });
+    $(".kot2").click(function () {
         var ten = $(this);
         $("#glowna").load(ten.attr("id"));
     });
