@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>Strona Główna</title>
     <link rel="stylesheet" href="css/styl_wlasny.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
-        .row.tresc{
+        .row.tresc {
             height: 1250px;
         }
 
-        .sidenav{
+        .sidenav {
             height: 100%;
             font-size: 24px;
-            background-color: rgba(0,0,0,0.29);
+            background-color: rgba(0, 0, 0, 0.29);
             border-right: 1px dotted black;
         }
 
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: 768px) {
             .sidenav {
                 height: auto;
                 padding: 15px;
             }
-            .row.tresc{
+
+            .row.tresc {
                 height: auto;
             }
+
         }
     </style>
-
 </head>
 <body>
 <header>
@@ -68,19 +69,24 @@
 <div class="container-fluid">
     <div class="row tresc">
         <aside class="col-md-3 text-md-center sidenav">
-            <p class="popularne text-sm-center mt-3">Najpopularniejsze koty:</p>
+            <p class="popularne text-md-center mt-3">Najpopularniejsze koty:</p>
             <form class="form-inline">
-                <button class="btn btn-secondary btn-block kot1" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Kot1" name="tabela.html">Kot1</button>
-                <button class="btn btn-secondary btn-block text" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Kot2" name="#">Kot2</button>
-                <button class="btn btn-secondary btn-block text" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Kot3" name="#">Kot3</button>
-                <button class="btn btn-secondary btn-block text" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Kot4" name="#">Kot4</button>
+                <button class="btn btn-primary btn-block kot1" type="button" data-toggle="tooltip"
+                        data-placement="right" title="Kot1" id="mruczek.html">Mruczek
+                </button>
+                <button class="btn btn-primary btn-block text" type="button" data-toggle="tooltip"
+                        data-placement="right" title="Kot2" name="#">Kot2
+                </button>
+                <button class="btn btn-primary btn-block text" type="button" data-toggle="tooltip"
+                        data-placement="right" title="Kot3" name="#">Kot3
+                </button>
+                <button class="btn btn-primary btn-block text" type="button" data-toggle="tooltip"
+                        data-placement="right" title="Kot4" name="#">Kot4
+                </button>
             </form>
+
         </aside>
-        <div class="col-md-9 text-sm-center bg-secondary tlo text-">
+        <div class="col-md-9 text-sm-center bg-secondary tlo">
             <h1>Oto moja strona o Kotach</h1>
             <main class="col-md-12 text-sm-center" id="glowna">
 
@@ -88,13 +94,13 @@
         </div>
     </div>
     <footer class="container-fluid text-sm-center">
-        <p>Stopka</p>
+        <p class="autor">Autor: Adrian Piwnicki</p>
     </footer>
 </div>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
     $(".tabela").click(function () {
@@ -103,7 +109,7 @@
     });
     $(".kot1").click(function () {
         var ten = $(this);
-        $("#glowna").load(ten.attr("name"));
+        $("#glowna").load(ten.attr("id"));
     });
 </script>
 </body>
