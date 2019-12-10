@@ -42,7 +42,7 @@
         <div class="collapse navbar-collapse" id="g_menu">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Galeria</a>
+                    <a class="nav-link galeria" id="galeria.html">Galeria</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button"
@@ -71,17 +71,16 @@
         <aside class="col-md-3 text-md-center sidenav">
             <p class="popularne text-center mt-3">Najpopularniejsze koty:</p>
             <form class="form-inline">
-                <button class="btn btn-primary btn-block kot1" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Mruczek - mały czarny kotek (w razie problemów kliknąć dwa razy)" id="mruczek.html">Mruczek
+                <button class="btn btn-primary btn-block kot1" type="button"
+                        title="Mruczek - mały czarny kotek (w razie problemów kliknąć dwa razy)" id="mruczek.html">
+                    Mruczek
                 </button>
-                <button class="btn btn-primary btn-block kot2" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Kitka - cętkowa wesoła kotka" id="kitka.html">Kitka
+                <button class="btn btn-primary btn-block kot2" type="button" title="Kitka - cętkowa wesoła kotka"
+                        id="#">Kitka
                 </button>
-                <button class="btn btn-primary btn-block text" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Kot3" name="#">Kot3
+                <button class="btn btn-primary btn-block text" type="button" title="Kot3" name="#">Kot3
                 </button>
-                <button class="btn btn-primary btn-block text" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Kot4" name="#">Kot4
+                <button class="btn btn-primary btn-block text" type="button" title="Kot4" name="#">Kot4
                 </button>
             </form>
 
@@ -95,11 +94,11 @@
         </div>
     </div>
 </div>
-    <div class="container-fluid bg-primary p-2 p-2">
-        <div class="col-12 text-center text-white">
-            <p class="autor">Autor: Adrian Piwnicki</p>
-        </div>
+<div class="container-fluid bg-primary p-2 p-2">
+    <div class="col-12 text-center text-white">
+        <p class="autor">Autor: Adrian Piwnicki</p>
     </div>
+</div>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
@@ -107,9 +106,6 @@
     $('#swieta_p').hide();
     $('#swieta_t').show(1800);
     $('#swieta_p').show(1800);
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
     $(".logo").click(function () {
         var ten = $(this);
         $("#glowna").load(ten.attr("id"));
@@ -119,10 +115,10 @@
         $("#glowna").load(ten.attr("id"));
     });
     $(".kot1").click(function () {
-            var ten = $(this);
-            $("#glowna").load(ten.attr("id"));
+        var ten = $(this);
+        $("#glowna").load(ten.attr("id"));
     });
-    $(".kot2").click(function () {
+    $(".galeria").click(function () {
         var ten = $(this);
         $("#glowna").load(ten.attr("id"));
     });

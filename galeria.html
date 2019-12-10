@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Simple Lightbox - Responsive touch friendly Image lightbox</title>
+    <link rel="stylesheet" href="css/simplelightbox.min.css">
+    <link href='css/galeria.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<div class="container">
+    <h2 class="align-center">Galeria Moich Kotów</h2>
+    <div class="gallery">
+        <a href="images/kitka1.jpg" class="big"><img src="images/kitka1.jpg" alt="kitka1" title="Kitka - 1" /></a>
+        <a href="images/kitka2.jpg"><img src="images/kitka2.jpg" alt="kitka2" title="Kitka - 2"/></a>
+        <a href="images/kitka3.jpg"><img src="images/kitka3.jpg" alt="kitka3" title="Kitka - 3"/></a>
+        <a href="images/kitka4.jpg"><img src="images/kitka4.jpg" alt="kitka4" title="Kitka - 4"/></a>
+        <a href="images/graf1.jpg"><img src="images/graf1.jpg" alt="graf1" title="Mruczek - 1" /></a>
+        <a href="images/graf2.jpg"><img src="images/graf2.jpg" alt="graf2" title="Mruczek - 2"/></a>
+        <a href="images/graf3.jpg"><img src="images/graf3.jpg" alt="graf3" title="Mruczek - 3"/></a>
+        <div class="clear"></div>
+        <a href="images/graf4.jpg"><img src="images/graf4.jpg" alt="graf4" title="Mruczek - 4"/></a>
+        <a href="images/kitka1.jpg" ><img src="images/kitka1.jpg" alt="kitka1" title="Kitka - 1" /></a>
+        <a href="images/kitka2.jpg" class="big"><img src="images/kitka2.jpg" alt="kitka2" title="Kitka - 2"/></a>
+        <a href="images/kitka3.jpg"><img src="images/kitka3.jpg" alt="kitka3" title="Kitka - 3"/></a>
+        <a href="images/kitka4.jpg"><img src="images/kitka4.jpg" alt="kitka4" title="Kitka - 4"/></a>
+    </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/simple-lightbox.min.js"></script>
+<script>
+    $(function(){
+        var $gallery = $('.gallery a').simpleLightbox();
+
+        $gallery.on('show.simplelightbox', function(){
+            console.log('Requested for showing');
+        })
+            .on('shown.simplelightbox', function(){
+                console.log('Shown');
+            })
+            .on('close.simplelightbox', function(){
+                console.log('Requested for closing');
+            })
+            .on('closed.simplelightbox', function(){
+                console.log('Closed');
+            })
+            .on('change.simplelightbox', function(){
+                console.log('Requested for change');
+            })
+            .on('next.simplelightbox', function(){
+                console.log('Requested for next');
+            })
+            .on('prev.simplelightbox', function(){
+                console.log('Requested for prev');
+            })
+            .on('nextImageLoaded.simplelightbox', function(){
+                console.log('Next image loaded');
+            })
+            .on('prevImageLoaded.simplelightbox', function(){
+                console.log('Prev image loaded');
+            })
+            .on('changed.simplelightbox', function(){
+                console.log('Image changed');
+            })
+            .on('nextDone.simplelightbox', function(){
+                console.log('Image changed to next');
+            })
+            .on('prevDone.simplelightbox', function(){
+                console.log('Image changed to prev');
+            })
+            .on('error.simplelightbox', function(e){
+                console.log('No image found, go to the next/prev');
+                console.log(e);
+            });
+    });
+</script>
+</body>
+</html>
