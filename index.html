@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/styl_wlasny.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @media screen and (max-width: 992px) {
+            .sidenav {
+                height: 300px;
+                padding: 15px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<header>
+    <nav class="navbar bg-primary navbar-dark navbar-expand-lg">
+        <a class="logo navbar-brand active" href="#">Strona główna</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#g_menu"
+                aria-controls="g_menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="g_menu">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Galeria</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button"
+                       aria-expanded="false" id="submenu" aria-haspopup="true">Rodzaje Kotów</a>
+                    <div class="dropdown-menu" aria-labelledby="submenu">
+                        <a class="dropdown-item" href="#">koty krótkowłose</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">koty długowłose</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">koty eksperymentalne</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tabela" id="tabela.html">Tabela Kotów</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Przygarnij Kota!</a>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <input class="form-control mr-1 mt-1" type="search" placeholder="Wyszukaj" aria-label="wyszukaj">
+                <button class="btn btn-secondary mt-1" type="submit">Szukaj</button>
+            </form>
+        </div>
+
+    </nav>
+</header>
+<div class="container-fluid">
+    <div class="row tresc">
+        <aside class="col-lg-3 col1 text-md-center sidenav">
+            <h4 class="mt-3">Najpopularniejsze koty:</h4>
+            <form class="form-inline">
+                <button class="btn btn-secondary btn-block kot1" type="button" data-toggle="tooltip"
+                        data-placement="right" title="Kot1" name="tabela.html">Kot1</button>
+                <button class="btn btn-secondary btn-block text" type="button" data-toggle="tooltip"
+                        data-placement="right" title="Kot2" name="#">Kot2</button>
+                <button class="btn btn-secondary btn-block text" type="button" data-toggle="tooltip"
+                        data-placement="right" title="Kot3" name="#">Kot3</button>
+                <button class="btn btn-secondary btn-block text" type="button" data-toggle="tooltip"
+                        data-placement="right" title="Kot4" name="#">Kot4</button>
+            </form>
+        </aside>
+        <div class="col-lg-9 col-md-12 text-md-center bg-secondary tlo">
+            <h1>Oto moja strona o Kotach</h1>
+            <main class="col-lg-12 text-lg-center" id="glowna">
+
+            </main>
+        </div>
+    </div>
+</div>
+<footer class="container-fluid">
+    <p>Stopka</p>
+</footer>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    $(".tabela").click(function () {
+        var ten = $(this);
+        $("#glowna").load(ten.attr("id"));
+    });
+    $(".kot1").click(function () {
+        var ten = $(this);
+        $("#glowna").load(ten.attr("name"));
+    });
+</script>
+</html>
