@@ -29,4 +29,8 @@ embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, sect
     cursor: pointer;
 }
 
+.popularne{
+    font-size: 20px;
+}
+
 /*===============================================================*/
