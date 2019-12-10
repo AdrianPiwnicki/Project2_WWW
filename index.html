@@ -72,7 +72,7 @@
             <p class="popularne text-center mt-3">Najpopularniejsze koty:</p>
             <form class="form-inline">
                 <button class="btn btn-primary btn-block kot1" type="button" data-toggle="tooltip"
-                        data-placement="right" title="Mruczek - mały czarny kotek" id="mruczek.html">Mruczek
+                        data-placement="right" title="Mruczek - mały czarny kotek (w razie problemów kliknąć dwa razy)" id="mruczek.html">Mruczek
                 </button>
                 <button class="btn btn-primary btn-block kot2" type="button" data-toggle="tooltip"
                         data-placement="right" title="Kitka - cętkowa wesoła kotka" id="kitka.html">Kitka
@@ -94,17 +94,19 @@
             </main>
         </div>
     </div>
-    <footer class="container-fluid text-center">
-        <p class="autor">Autor: Adrian Piwnicki</p>
-    </footer>
 </div>
+    <div class="container-fluid bg-primary p-2 p-2">
+        <div class="col-12 text-center text-white">
+            <p class="autor">Autor: Adrian Piwnicki</p>
+        </div>
+    </div>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
     $('#swieta_t').hide();
     $('#swieta_p').hide();
-    $('#swieta_t').show(2000);
-    $('#swieta_p').show(2000);
+    $('#swieta_t').show(1800);
+    $('#swieta_p').show(1800);
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
@@ -117,8 +119,8 @@
         $("#glowna").load(ten.attr("id"));
     });
     $(".kot1").click(function () {
-        var ten = $(this);
-        $("#glowna").load(ten.attr("id"));
+            var ten = $(this);
+            $("#glowna").load(ten.attr("id"));
     });
     $(".kot2").click(function () {
         var ten = $(this);
