@@ -21,20 +21,6 @@ embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, sect
     text-transform: uppercase;
 }
 
-.tresc{
-    height: 1200px;
-}
-
-.col1{
-    background-color: rgba(0,0,0,0.29);
-    border-right: 1px dotted black;
-}
-
-.sidenav{
-    height: 1200px;
-    font-size: 24px;
-}
-
 .tlo{
     background: url("../images/tlo.jpg") repeat fixed center;
 }
