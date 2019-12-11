@@ -33,7 +33,42 @@ embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, sect
     font-size: 20px;
 }
 
+.kot1{
+    font-size: 20px;
+}
+
+.kot2{
+    font-size: 20px;
+}
+
+.row.tresc {
+    height: 900px;
+}
+
+.sidenav {
+    height: 100%;
+    font-size: 24px;
+    border-right: 2px dotted black;
+}
+
+@media screen and (max-width: 768px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+
+    .row.tresc {
+        height: auto;
+    }
+
+}
+
 /*===============================================================*/
 .autor{
     font-size: 18px;
+}
+
+.mruczek{
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
 }

@@ -1,45 +1,17 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mruczek</title>
-    <link rel="stylesheet" href="css/styl_wlasny.css">
-    <link rel="stylesheet" href="css/jquery.bxslider.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-</head>
-<body>
 <div class="container">
     <h2 class="h2 text-uppercase">Mruczek</h2>
-<div class="slider">
-    <img src="images/graf1.jpg" alt="mruczek1" />
-    <img src="images/graf2.jpg" alt="mruczek2" />
-    <img src="images/graf3.jpg" alt="mruczek3" />
-    <img src="images/graf4.jpg" alt="mruczek4" />
-</div>
+    <div id="slajder" class="slider col-10 mr-auto bg-primary">
+        <img class="mruczek" src="images/graf1.jpg" alt="mruczek1" />
+        <img src="images/graf2.jpg" alt="mruczek2" />
+        <img src="images/graf3.jpg" alt="mruczek3" />
+        <img src="images/graf4.jpg" alt="mruczek4" />
+    </div>
     <p class="autor">Zdjęcia autorskie.</p>
 </div>
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/jquery.bxslider.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script>
-    $(document).ready(function(){
-        $('.slider').bxSlider({
-            mode: 'fade',
-            infiniteLoop: true,
-            auto: true,
-            autoStart: true,
-            autoDirection: 'next',
-            autoHover: true,
-            pause: 3000,
-            autoControls: false,
-            pager: true,
-            pagerType: 'full',
-            controls: true,
-            captions: true,
-            responsive: true
+    $(function () {
+        $("#slajder").excoloSlider({
+            interval: 3000
         });
     });
 </script>
-</body>
-</html>

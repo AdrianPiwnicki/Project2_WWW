@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jquery.cycle.all" level="application" />
     <orderEntry type="library" name="jquery.bxslider" level="application" />
+    <orderEntry type="library" name="jquery.bxslider" level="application" />
   </component>
 </module>
