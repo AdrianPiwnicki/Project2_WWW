@@ -14,8 +14,7 @@
         .sidenav {
             height: 100%;
             font-size: 24px;
-            background-color: rgba(0, 0, 0, 0.29);
-            border-right: 1px dotted black;
+            border-right: 2px dotted black;
         }
 
         @media screen and (max-width: 768px) {
@@ -68,7 +67,7 @@
 </header>
 <div class="container-fluid">
     <div class="row tresc">
-        <aside class="col-md-3 text-md-center sidenav">
+        <aside class="col-md-3 text-md-center bg-secondary sidenav">
             <p class="popularne text-center mt-3">Najpopularniejsze koty:</p>
             <form class="form-inline">
                 <button class="btn btn-primary btn-block kot1" type="button"
@@ -76,7 +75,7 @@
                     Mruczek
                 </button>
                 <button class="btn btn-primary btn-block kot2" type="button" title="Kitka - cętkowa wesoła kotka"
-                        id="#">Kitka
+                        id="kitka.html">Kitka
                 </button>
                 <button class="btn btn-primary btn-block text" type="button" title="Kot3" name="#">Kot3
                 </button>
@@ -102,11 +101,13 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
-    $('#swieta_t').hide();
-    $('#swieta_p').hide();
-    $('#swieta_t').show(1800);
-    $('#swieta_p').show(1800);
+    $('#swieta_t').hide().show(1800);
+    $('#swieta_p').hide().show(1800);
     $(".logo").click(function () {
+        var ten = $(this);
+        $("#glowna").load(ten.attr("id"));
+    });
+    $(".galeria").click(function () {
         var ten = $(this);
         $("#glowna").load(ten.attr("id"));
     });
@@ -118,10 +119,11 @@
         var ten = $(this);
         $("#glowna").load(ten.attr("id"));
     });
-    $(".galeria").click(function () {
+    $(".kot2").click(function () {
         var ten = $(this);
         $("#glowna").load(ten.attr("id"));
     });
+
 </script>
 </body>
 </html>

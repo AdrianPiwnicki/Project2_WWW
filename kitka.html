@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitka</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styl_wlasny.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="kitka col-md-6 pt-2">
+            <img id="kt1" src="images/kitka1.jpg" class="img-fluid" alt="kitka1" />
+            <button class="btn btn-primary mb-3 bkt1 col-12" type="button" title="Efekt Fade JQuery">Efekt Slide - Kitka 1
+            </button>
+        </div>
+        <div class="kitka col-md-6 pt-2">
+            <img id="kt2" src="images/kitka2.jpg" class="img-fluid" alt="kitka2" />
+                <button class="btn btn-primary mb-3 bkt2 col-12" type="button" title="Efekt Fade JQuery">Efekt Fade - Kitka 2
+                </button>
+        </div>
+        <div class="kitka col-md-6 pt-2">
+            <img id="kt3" src="images/kitka3.jpg" class="img-fluid" alt="kitka3" />
+            <button class="btn btn-primary mb-3 bkt3 col-12" type="button" title="Efekt Queue JQuery">Efekt Queue - Kitka 3
+            </button>
+        </div>
+        <div class="kitka col-md-6 pt-2">
+            <img id="kt4" src="images/kitka4.jpg" class="img-fluid" alt="kitka4" />
+            <button class="btn btn-primary mb-3 bkt4 col-12" type="button" title="Efekt Animate JQuery">Efekt Animate - Kitka 4
+            </button>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".bkt1").click(function () {
+            $("#kt1").slideUp(1000).slideDown(1000);
+        });
+        $(".bkt2").click(function(){
+            $("#kt2").fadeOut().fadeIn();
+        });
+        $(".bkt3").click(function(){
+            var div = $("#kt3");
+            div.animate({height: 100}, "slow");
+            div.animate({width: 100}, "slow");
+            div.animate({height: 281}, "slow");
+            div.animate({width: 540}, "slow", function () {
+                div.removeAttr('style');}
+                );
+        });
+        $(".bkt4").click(function(){
+            var div = $("#kt4");
+            div.animate({opacity: 0.8},100);
+            div.animate({width: 440}, "slow");
+            div.animate({opacity: 0.6},100);
+            div.animate({width: 340}, "slow");
+            div.animate({opacity: 0.4}, 100);
+            div.animate({width: 240}, "slow");
+            div.animate({opacity: 0.2},100);
+            div.animate({width: 140}, "slow");
+            div.animate({opacity: 0},100);
+            div.animate({opacity: 0.2},100);
+            div.animate({width: 240}, "slow");
+            div.animate({opacity: 0.4},100);
+            div.animate({width: 340}, "slow");
+            div.animate({opacity: 0.6},100);
+            div.animate({width: 440}, "slow");
+            div.animate({opacity: 0.8}, 100);
+            div.animate({width: 540}, "slow");
+            div.animate({opacity: 1}, 100, function () {
+                div.removeAttr('style');
+            });
+        });
+    });
+</script>
+</body>
+</html>
