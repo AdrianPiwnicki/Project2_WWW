@@ -39,11 +39,10 @@
                     <a class="nav-link tabela" id="tabela.html">Tabela Kotów</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Przygarnij Kota!</a>
+                    <a class="nav-link przygarnij" id="formularz.html">Przygarnij Kota!</a>
                 </li>
             </ul>
         </div>
-
     </nav>
 </header>
 <div class="container-fluid">
@@ -97,6 +96,10 @@
         $("#glowna").load(ten.attr("id"));
     });
     $(".tabela").click(function () {
+        var ten = $(this);
+        $("#glowna").load(ten.attr("id"));
+    });
+    $(".przygarnij").click(function () {
         var ten = $(this);
         $("#glowna").load(ten.attr("id"));
     });
