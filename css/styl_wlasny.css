@@ -21,10 +21,6 @@ embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, sect
     text-transform: uppercase;
 }
 
-.tlo{
-    background: url("../images/tlo.jpg") repeat fixed center;
-}
-
 .tabela:hover, .logo:hover, .galeria:hover{
     cursor: pointer;
 }
@@ -41,6 +37,14 @@ embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, sect
     font-size: 20px;
 }
 
+.kot3{
+    font-size: 20px;
+}
+
+.kot4{
+    font-size: 20px;
+}
+
 .row.tresc {
     height: 900px;
 }
@@ -49,6 +53,16 @@ embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, sect
     height: 100%;
     font-size: 24px;
     border-right: 2px dotted black;
+    background-color: #5CC9FF;
+}
+
+#swieta_p{
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.mieso{
+    background-color: #BDEAFF;
 }
 
 @media screen and (max-width: 768px) {
@@ -70,5 +84,6 @@ embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, sect
 
 .mruczek{
     border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid gray;
+    margin-bottom: 2px;
 }
