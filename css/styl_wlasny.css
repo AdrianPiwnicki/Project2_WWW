@@ -21,7 +21,7 @@ embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, sect
     text-transform: uppercase;
 }
 
-.tabela:hover, .logo:hover, .galeria:hover{
+.tabela:hover, .logo:hover, .galeria:hover, .przygarnij:hover{
     cursor: pointer;
 }
 
@@ -46,7 +46,7 @@ embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, sect
 }
 
 .row.tresc {
-    height: 1050px;
+    height: 1150px;
 }
 
 .sidenav {
@@ -86,4 +86,10 @@ embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, sect
     border-radius: 10px;
     border: 1px solid gray;
     margin-bottom: 2px;
+}
+
+#myform{
+    border: 1px solid black;
+    background-color: #5CC9FF;
+    border-radius: 10px;
 }

@@ -15,14 +15,11 @@
 <header>
     <nav class="navbar bg-primary navbar-dark navbar-expand-md">
         <a class="logo navbar-brand active" id="index2.html">Strona główna</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#g_menu"
-                aria-controls="g_menu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="g_menu">
+        <div class="collapse navbar-collapse d-inline-block" id="g_menu">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link galeria" id="galeria.html">Galeria</a>
+                    <a class="nav-link galeria" id="galeria.html" data-toggle="tooltip" data-placement="bottom"
+                       title="Galeria zdjęć kotów - LightBox">Galeria</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button"
@@ -36,10 +33,12 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link tabela" id="tabela.html">Tabela Kotów</a>
+                    <a class="nav-link tabela" id="tabela.html" data-toggle="tooltip" data-placement="bottom"
+                       title="Tabela z rasami kotów (tabela + jQuery)">Tabela Kotów</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link przygarnij" id="formularz.html">Przygarnij Kota!</a>
+                    <a class="nav-link przygarnij" id="formularz.html" data-toggle="tooltip" data-placement="auto"
+                       title="Formularz przygarnięcia kota (formularz + walidacja<plugin jQuery>)">Przygarnij Kota!</a>
                 </li>
             </ul>
         </div>
@@ -51,7 +50,9 @@
             <p class="popularne text-center mt-3 mb-3">Najpopularniejsze koty:</p>
             <form class="form-inline">
                 <button class="btn btn-info btn-block kot1" type="button"
-                        title="Mruczek - mały czarny kotek (w razie problemów kliknąć dwa razy)" id="mruczek.html">
+                        title="Mruczek - mały czarny kotek " id="mruczek.html"
+                        data-container="body" data-toggle="popover" data-placement="bottom"
+                        data-content="Slajder - jQuery - (w razie problemów kliknąć dwa razy).">
                     Mruczek
                 </button>
                 <button class="btn btn-info btn-block kot2" type="button" title="Kitka - cętkowa wesoła kotka"
@@ -84,6 +85,7 @@
 <script src="js/dataTables.bootstrap4.min.js"></script>
 <script src="js/jquery.excoloSlider.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 <script>
     $('#swieta_t').hide().show(1800);
     $('#swieta_p').hide().show(1800);
@@ -110,6 +112,12 @@
     $(".kot2").click(function () {
         var ten = $(this);
         $("#glowna").load(ten.attr("id"));
+    });
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    $(function () {
+        $('[data-toggle="popover"]').popover({trigger: "hover"});
     });
 </script>
 </body>
