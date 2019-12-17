@@ -44,7 +44,9 @@
                 </h3>
             </div>
         </div>
-        <div class="col-md-4 t2"><img src="images/historia.jpg" class="img-fluid" alt="kot z historia"/></div>
+        <div class="col-md-4 t2">
+            <h3 class="h3 text-center">jQuery.Zoom</h3>
+            <img src="images/historia.jpg" class="img-fluid historia" alt="kot z historia"/></div>
         <div class="col-md-4 card text-white bg-info mb-3 mt-md-2 t3">
             <div class="card-header">Ciekawostka</div>
             <div class="card-body">
@@ -66,9 +68,20 @@
         </div>
     </div>
 </div>
+<script src="js/jquery.zoom.min.js"></script>
 <script>
     $('.t1').hide().show(1800);
     $('.t2').hide().show(1800);
     $('.t3').hide().show(1800);
     $('.t4').hide().show(1800);
+    $(document).ready(function(){
+        $('img')
+            .wrap('<span style="display:inline-block"></span>')
+            .css('display', 'block')
+            .parent()
+            .zoom();
+    });
+    $(document).ready(function(){
+        $('.historia').zoom({url: 'images/historia.jpg'});
+    });
 </script>
