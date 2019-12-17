@@ -13,10 +13,10 @@
 </head>
 <body>
 <header>
-    <nav class="navbar bg-primary navbar-dark navbar-expand-md">
-        <a class="logo navbar-brand active" id="index2.html">Strona główna</a>
+    <nav class="navbar bg-primary navbar-dark navbar-expand-md text-center">
+        <a class="logo navbar-brand" id="index2.html">Strona główna</a>
         <div class="collapse navbar-collapse d-inline-block" id="g_menu">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto nawigacja">
                 <li class="nav-item">
                     <a class="nav-link galeria" id="galeria.html" data-toggle="tooltip" data-placement="bottom"
                        title="Galeria zdjęć kotów - LightBox">Galeria</a>
@@ -46,7 +46,7 @@
 </header>
 <div class="container-fluid">
     <div class="row tresc">
-        <aside class="col-md-3 text-md-center sidenav pb-5">
+        <aside class="col-md-3 text-md-center sidenav pb-5 h-100">
             <p class="popularne text-center mt-3 mb-3">Najpopularniejsze koty:</p>
             <form class="form-inline">
                 <button class="btn btn-info btn-block kot1" type="button"
@@ -56,16 +56,23 @@
                     Mruczek
                 </button>
                 <button class="btn btn-info btn-block kot2" type="button" title="Kitka - cętkowa wesoła kotka"
-                        id="kitka.html">Kitka
+                        id="kitka.html" data-container="body" data-toggle="popover" data-placement="bottom"
+                        data-content="Efekty jQuery typu: Fade, Slide, Animate, Queue">Kitka
                 </button>
-                <button class="btn btn-info btn-block kot3" type="button" title="Kot3" name="#">Kot3
-                </button>
-                <button class="btn btn-info btn-block kot4" type="button" title="Kot4" name="#">Kot4
+                <button class="btn btn-info btn-block kot3" type="button" title="Felix - spokojny i zabawny kotek"
+                        id="felix.html" data-container="body" data-toggle="popover" data-placement="bottom"
+                        data-content="Wtyczka - Bootstrap Carousel">Felix
                 </button>
             </form>
-
+            <p class="popularne text-center mt-3 mb-3">Ciekawostki o kotach:</p>
+            <form class="form-inline">
+                <button class="btn btn-info btn-block kot4" type="button" title="Historia kotów" id="historia.html"
+                        data-container="body" data-toggle="popover" data-placement="bottom"
+                        data-content="Elementy strony  zastosowanie klas BS  - treść +media+ jQuery ">Historia kotów
+                </button>
+            </form>
         </aside>
-        <div class="col-md-9 text-center mieso pb-5">
+        <div class="col-md-9 text-center mieso pb-5 h-100">
             <h1 class="h1 text-uppercase mt-1">Oto moja strona o Kotach</h1>
             <main class="col-md-12 text-center" id="glowna">
                 <h2 id="swieta_t" class="h2">Święta się zbliżają, więc: </h2>
@@ -110,6 +117,14 @@
         $("#glowna").load(ten.attr("id"));
     });
     $(".kot2").click(function () {
+        var ten = $(this);
+        $("#glowna").load(ten.attr("id"));
+    });
+    $(".kot3").click(function () {
+        var ten = $(this);
+        $("#glowna").load(ten.attr("id"));
+    });
+    $(".kot4").click(function () {
         var ten = $(this);
         $("#glowna").load(ten.attr("id"));
     });
